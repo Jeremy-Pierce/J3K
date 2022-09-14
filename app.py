@@ -1,0 +1,97 @@
+import os
+import json
+from web3 import Web3
+from pathlib import Path
+from dotenv import load_dotenv
+import streamlit as st
+
+load_dotenv()
+
+w3 = Web3(Web3.HTTPProvider(os.getenv("WEB3_PROVIDER_URI")))
+
+deployer_contract_path = './contracts/compiled/J3Koin_abi.json'
+crowdsale_contract_path = './contracts/compiled/J3Koin_crowdsale_abi.json'
+token_contract_path = './contracts/compiled/J3Koin_token_abi.json'
+deployer_contract_address = os.getenv("SMART_CONTRACT_ADDRESS")
+
+@st.cache(allow_output_mutation=True)
+def load_contract(path, contract_address):
+    with open(Path(path)) as f:
+        contract_abi = json.load(f)
+
+    contract = w3.eth.contract(
+        address = contract_address,
+        abi = contract_abi
+    )
+
+    return contract
+
+
+st.title("Welcome to J3KOIN")
+st.write("Choose an account to get started")
+accounts = w3.eth.accounts
+address = st.selectbox("Select Account", options=accounts)
+st.markdown("---")
+
+
+################################################################################
+# Deployer Contract Details
+################################################################################
+st.markdown("## Deployer Contract Details")
+st.markdown(f'Deployer Contract Address : {deployer_contract_address}')
+deployer_contract = load_contract(deployer_contract_path, deployer_contract_address)
+
+#breakpoint()
+
+try:
+    crowdsale_contract_address = deployer_contract.functions.j3koin_crowdsale_address().call()
+    token_contract_address = deployer_contract.functions.j3koin_token_address().call()
+except Exception as inst:
+    print(f'Error in call to Deployer Contract Functions {inst}')
+
+st.markdown(f'Crowdsale Contract Address : {crowdsale_contract_address}')
+st.markdown(f'Token Contract Address : {token_contract_address}')
+
+################################################################################
+# Crowdsale
+################################################################################
+st.markdown("## Crowdsale")
+st.markdown(f'Crowdsale Contract Address : {crowdsale_contract_address}')
+crowdsale_contract = load_contract(crowdsale_contract_path, crowdsale_contract_address)
+
+#breakpoint()
+
+try:
+    crowdsale_contract_rate = crowdsale_contract.functions.rate().call()
+    crowdsale_contract_token = crowdsale_contract.functions.token().call()
+    crowdsale_contract_wallet = crowdsale_contract.functions.wallet().call()
+    crowdsale_contract_weiRaised = crowdsale_contract.functions.weiRaised().call()
+except Exception as inst:
+    print(f'Error in call to Crowdsale Contract Functions {inst}')
+
+st.markdown(f'Crowdsale Contract Rate : {crowdsale_contract_rate}')
+st.markdown(f'Crowdsale Contract Token : {crowdsale_contract_token}')
+st.markdown(f'Crowdsale Contract Wallet : {crowdsale_contract_wallet}')
+st.markdown(f'Crowdsale Contract weiRaised : {crowdsale_contract_weiRaised}')
+
+################################################################################
+# Token Details
+################################################################################
+st.markdown("## Token Details")
+st.markdown(f'Token Contract Address : {token_contract_address}')
+token_contract = load_contract(token_contract_path, token_contract_address)
+
+#breakpoint()
+
+try:
+    token_contract_name = token_contract.functions.name().call()
+    token_contract_symbol = token_contract.functions.symbol().call()
+    token_contract_totalSupply = token_contract.functions.totalSupply().call()
+    token_contract_decimals = token_contract.functions.decimals().call()
+except Exception as inst:
+    print(f'Error in call to Token Contract Functions {inst}')
+
+st.markdown(f'Token Contract name : {token_contract_name}')
+st.markdown(f'Token Contract symbol : {token_contract_symbol}')
+st.markdown(f'Token Contract totalSupply : {token_contract_totalSupply}')
+st.markdown(f'Token Contract decimals : {token_contract_decimals}')
