@@ -4,6 +4,7 @@ from web3 import Web3
 from pathlib import Path
 from dotenv import load_dotenv
 import streamlit as st
+import pandas as pd
 
 load_dotenv()
 
@@ -28,9 +29,6 @@ def load_contract(path, contract_address):
 
 
 st.title("Welcome to J3KOIN")
-st.write("Choose an account to get started")
-accounts = w3.eth.accounts
-address = st.selectbox("Select Account", options=accounts)
 st.markdown("---")
 
 
@@ -77,12 +75,13 @@ st.markdown(f'Crowdsale Contract weiRaised : {crowdsale_contract_weiRaised}')
 accounts = w3.eth.accounts
 beneficiary_address = st.selectbox(label="Select Account", key='drpBenefAddress', options=accounts)
 beneficiery_tokens = st.number_input("Number of Tokens Needed", value=0, step=1)
+beneficiary_amount = beneficiery_tokens * crowdsale_contract_rate
 if st.button("Buy Tokens"):
     print(f'Calling Crowdsale Contract Function buyTokens for Beneficiary {beneficiary_address} FromAddress {crowdsale_contract_wallet}')
     try:
         tx_hash = crowdsale_contract.functions.buyTokens(
             beneficiary_address
-        ).transact({"from": crowdsale_contract_wallet, 'value':1000000000000000000})
+        ).transact({"from": crowdsale_contract_wallet, 'value': beneficiary_amount})
         receipt = w3.eth.waitForTransactionReceipt(tx_hash)
         st.write(receipt)
     except Exception as ex1:
@@ -110,4 +109,16 @@ st.markdown(f'Token Contract symbol : {token_contract_symbol}')
 st.markdown(f'Token Contract totalSupply : {token_contract_totalSupply}')
 st.markdown(f'Token Contract decimals : {token_contract_decimals}')
 
+################################################################################
+# Beneficiary Details
+################################################################################
+st.markdown("## Beneficiary Details")
 
+dfBeneficiary = pd.DataFrame(accounts, columns=['BeneficiaryAccount'])
+benef_balances = []
+for benefAccount in dfBeneficiary['BeneficiaryAccount']:
+    benefAmount = token_contract.functions.balanceOf(account=benefAccount).call()
+    benef_balances.append(benefAmount) 
+dfBeneficiary['TokenBalance'] = benef_balances
+
+st.table(dfBeneficiary)
