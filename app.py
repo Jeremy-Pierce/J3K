@@ -74,6 +74,20 @@ st.markdown(f'Crowdsale Contract Token : {crowdsale_contract_token}')
 st.markdown(f'Crowdsale Contract Wallet : {crowdsale_contract_wallet}')
 st.markdown(f'Crowdsale Contract weiRaised : {crowdsale_contract_weiRaised}')
 
+accounts = w3.eth.accounts
+beneficiary_address = st.selectbox(label="Select Account", key='drpBenefAddress', options=accounts)
+beneficiery_tokens = st.number_input("Number of Tokens Needed", value=0, step=1)
+if st.button("Buy Tokens"):
+    print(f'Calling Crowdsale Contract Function buyTokens for Beneficiary {beneficiary_address} FromAddress {crowdsale_contract_wallet}')
+    try:
+        tx_hash = crowdsale_contract.functions.buyTokens(
+            beneficiary_address
+        ).transact({"from": crowdsale_contract_wallet, 'value':1000000000000000000})
+        receipt = w3.eth.waitForTransactionReceipt(tx_hash)
+        st.write(receipt)
+    except Exception as ex1:
+        print(f'Error in call to Crowdsale Contract Function buyTokens {ex1}')
+
 ################################################################################
 # Token Details
 ################################################################################
@@ -95,3 +109,5 @@ st.markdown(f'Token Contract name : {token_contract_name}')
 st.markdown(f'Token Contract symbol : {token_contract_symbol}')
 st.markdown(f'Token Contract totalSupply : {token_contract_totalSupply}')
 st.markdown(f'Token Contract decimals : {token_contract_decimals}')
+
+
