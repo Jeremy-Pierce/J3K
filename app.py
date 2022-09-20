@@ -1,5 +1,6 @@
 import os
 import json
+import re
 from web3 import Web3
 from pathlib import Path
 from dotenv import load_dotenv
@@ -28,7 +29,8 @@ def load_contract(path, contract_address):
     return contract
 
 
-st.title("Welcome to J3KOIN")
+#st.title("Welcome to J3KOIN")
+st.image('J3Koin-Logo.png')
 st.markdown("---")
 
 
@@ -109,6 +111,41 @@ st.markdown(f'Token Contract symbol : {token_contract_symbol}')
 st.markdown(f'Token Contract totalSupply : {token_contract_totalSupply}')
 st.markdown(f'Token Contract decimals : {token_contract_decimals}')
 
+sender_address = st.selectbox(label="Sender Account", key='drpSenderAddress', options=accounts)
+recipient_address = st.selectbox(label="Recipient Account", key='drpRecipientAddress', options=accounts)
+transfer_tokens = st.number_input("Number of Tokens Needed", key='txtTransferTokens', value=0, step=1)
+
+if st.button("Transfer Tokens"):
+    if(sender_address != recipient_address):
+        sender_tokens = token_contract.functions.balanceOf(account=sender_address).call()
+        if(transfer_tokens<=sender_tokens):
+            try:
+                print(f'Calling Token Contract Function approve for Sender {sender_address}')
+                tx_hash = token_contract.functions.approve(
+                    sender_address,
+                    transfer_tokens
+                ).transact({"from": token_contract_address})
+                receipt = w3.eth.waitForTransactionReceipt(tx_hash)
+                st.write(receipt)
+            except Exception as ex3:
+                print(f'Error calling Token Contract Function approve {ex3}')
+                exit()
+
+            try:
+                print(f'Calling Token Contract Function transferFrom from Sender {sender_address} to Recipient {recipient_address}')
+                tx_hash = token_contract.functions.transferFrom(
+                    sender_address,
+                    recipient_address,
+                    transfer_tokens
+                ).transact()
+                receipt = w3.eth.waitForTransactionReceipt(tx_hash)
+                st.write(receipt)
+            except Exception as ex4:
+                print(f'Error calling Token Contract Function transferFrom {ex4}')
+        else:
+            print('Sender Address does not have enough Tokens')            
+    else:
+        print('Sender Address is same as Recipient')
 ################################################################################
 # Beneficiary Details
 ################################################################################
@@ -122,3 +159,4 @@ for benefAccount in dfBeneficiary['BeneficiaryAccount']:
 dfBeneficiary['TokenBalance'] = benef_balances
 
 st.table(dfBeneficiary)
+
