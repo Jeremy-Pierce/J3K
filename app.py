@@ -28,7 +28,6 @@ def load_contract(path, contract_address):
 
     return contract
 
-
 #st.title("Welcome to J3KOIN")
 st.image('J3Koin-Logo.png')
 st.markdown("---")
