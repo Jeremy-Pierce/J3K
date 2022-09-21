@@ -6,6 +6,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 import streamlit as st
 import pandas as pd
+from decimal import Decimal
 
 load_dotenv()
 
@@ -110,41 +111,28 @@ st.markdown(f'Token Contract symbol : {token_contract_symbol}')
 st.markdown(f'Token Contract totalSupply : {token_contract_totalSupply}')
 st.markdown(f'Token Contract decimals : {token_contract_decimals}')
 
-sender_address = st.selectbox(label="Sender Account", key='drpSenderAddress', options=accounts)
+
 recipient_address = st.selectbox(label="Recipient Account", key='drpRecipientAddress', options=accounts)
 transfer_tokens = st.number_input("Number of Tokens Needed", key='txtTransferTokens', value=0, step=1)
-
-if st.button("Transfer Tokens"):
-    if(sender_address != recipient_address):
-        sender_tokens = token_contract.functions.balanceOf(account=sender_address).call()
-        if(transfer_tokens<=sender_tokens):
+wallet_tokens = token_contract.functions.balanceOf(account=crowdsale_contract_wallet).call()
+if st.button("Transfer"):
+    if(deployer_contract_address != recipient_address):
+        if(transfer_tokens<=wallet_tokens):
             try:
-                print(f'Calling Token Contract Function approve for Sender {sender_address}')
-                tx_hash = token_contract.functions.approve(
-                    sender_address,
-                    transfer_tokens
-                ).transact({"from": token_contract_address})
-                receipt = w3.eth.waitForTransactionReceipt(tx_hash)
-                st.write(receipt)
-            except Exception as ex3:
-                print(f'Error calling Token Contract Function approve {ex3}')
-                exit()
-
-            try:
-                print(f'Calling Token Contract Function transferFrom from Sender {sender_address} to Recipient {recipient_address}')
-                tx_hash = token_contract.functions.transferFrom(
-                    sender_address,
+                print(f'Calling Token Contract Function transfer from Sender {crowdsale_contract_wallet} to Recipient {recipient_address}')
+                tx_hash = token_contract.functions.transfer(
                     recipient_address,
                     transfer_tokens
-                ).transact()
+                ).transact({"from": crowdsale_contract_wallet})
                 receipt = w3.eth.waitForTransactionReceipt(tx_hash)
                 st.write(receipt)
             except Exception as ex4:
-                print(f'Error calling Token Contract Function transferFrom {ex4}')
+                print(f'Error calling Token Contract Function transfer {ex4}')
         else:
-            print('Sender Address does not have enough Tokens')            
+            print(f'Not enough Tokens in Wallet')
     else:
-        print('Sender Address is same as Recipient')
+        print(f'Sender and Recipient address cannot be same')
+
 ################################################################################
 # Beneficiary Details
 ################################################################################
@@ -153,8 +141,11 @@ st.markdown("## Beneficiary Details")
 dfBeneficiary = pd.DataFrame(accounts, columns=['BeneficiaryAccount'])
 benef_balances = []
 for benefAccount in dfBeneficiary['BeneficiaryAccount']:
-    benefAmount = token_contract.functions.balanceOf(account=benefAccount).call()
-    benef_balances.append(benefAmount) 
+    try:
+        benefAmount = Decimal(token_contract.functions.balanceOf(account=benefAccount).call())
+        benef_balances.append(benefAmount) 
+    except Exception as ex5:        
+        print('Error during conversion')
 dfBeneficiary['TokenBalance'] = benef_balances
 
 st.table(dfBeneficiary)
