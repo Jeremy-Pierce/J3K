@@ -33,11 +33,16 @@ def load_contract(path, contract_address):
 st.image('J3Koin-Logo.png')
 st.markdown("---")
 
+################################################################################
+# Streamlit Style
+st.markdown(""" <style> .orange-font { color: #FBD400; font-size: 300%; font-weight:bold} </style> """, unsafe_allow_html=True)
+################################################################################
+
 
 ################################################################################
 # Deployer Contract Details
 ################################################################################
-st.markdown("## Deployer Contract Details")
+st.markdown("<p class='orange-font' >Deployer Contract Details</P>", unsafe_allow_html=True)
 st.markdown(f'Deployer Contract Address : {deployer_contract_address}')
 deployer_contract = load_contract(deployer_contract_path, deployer_contract_address)
 
@@ -55,7 +60,7 @@ st.markdown(f'Token Contract Address : {token_contract_address}')
 ################################################################################
 # Crowdsale
 ################################################################################
-st.markdown("## Crowdsale")
+st.markdown("<p class='orange-font'>Crowdsale Contract Details</P>", unsafe_allow_html=True)
 st.markdown(f'Crowdsale Contract Address : {crowdsale_contract_address}')
 crowdsale_contract = load_contract(crowdsale_contract_path, crowdsale_contract_address)
 
@@ -92,7 +97,7 @@ if st.button("Buy Tokens"):
 ################################################################################
 # Token Details
 ################################################################################
-st.markdown("## Token Details")
+st.markdown("<p class='orange-font'>Token Contract Details</P>", unsafe_allow_html=True)
 st.markdown(f'Token Contract Address : {token_contract_address}')
 token_contract = load_contract(token_contract_path, token_contract_address)
 
@@ -105,6 +110,8 @@ try:
     token_contract_decimals = token_contract.functions.decimals().call()
 except Exception as inst:
     print(f'Error in call to Token Contract Functions {inst}')
+
+st.markdown('<p class="font">Guess the object Names</p>', unsafe_allow_html=True)
 
 st.markdown(f'Token Contract name : {token_contract_name}')
 st.markdown(f'Token Contract symbol : {token_contract_symbol}')
@@ -136,8 +143,7 @@ if st.button("Transfer"):
 ################################################################################
 # Beneficiary Details
 ################################################################################
-st.markdown("## Beneficiary Details")
-
+st.markdown("<p class='orange-font'>Beneficiary Details</P>", unsafe_allow_html=True)
 dfBeneficiary = pd.DataFrame(accounts, columns=['BeneficiaryAccount'])
 benef_balances = []
 for benefAccount in dfBeneficiary['BeneficiaryAccount']:

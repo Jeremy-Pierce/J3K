@@ -2,5 +2,6 @@
 primaryColor="#FBD400"
 backgroundColor="#000000"
 secondaryBackgroundColor="#000000"
-textColor="#FBD400"
+textColor="#FFFFFF"
 font="sans serif"
+font-size='150%'
