@@ -111,8 +111,6 @@ try:
 except Exception as inst:
     print(f'Error in call to Token Contract Functions {inst}')
 
-st.markdown('<p class="font">Guess the object Names</p>', unsafe_allow_html=True)
-
 st.markdown(f'Token Contract name : {token_contract_name}')
 st.markdown(f'Token Contract symbol : {token_contract_symbol}')
 st.markdown(f'Token Contract totalSupply : {token_contract_totalSupply}')
