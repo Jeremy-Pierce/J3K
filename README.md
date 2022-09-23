@@ -47,6 +47,22 @@ import pandas as pd
 
 from decimal import Decimal
 
+### Theme for Streamlit:
+
+[theme]
+
+primaryColor="#FBD400"
+
+backgroundColor="#000000"
+
+secondaryBackgroundColor="#000000"
+
+textColor="#FFFFFF"
+
+font="sans serif"
+
+font-size='150%'
+
 ## Usage
 
 ![J3KOIN](https://github.com/kcrachapudi/J3K/blob/main/J3Koin-Logo-small.png)
