@@ -64,7 +64,7 @@ If you would like to see our full, interactive slide deck, we have included a Li
 
 [J3KOIN Deployed Smart Contract within IDE Remix Dev Environment](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#9)
 
-[Purhcasing J3KOIN with IDE Remix Dev Environment](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#9)
+[Purhcasing J3KOIN with IDE Remix Dev Environment](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#10)
 
 [Transferring J3KOIN from one Metamask Account to another Metamask Account](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#11)
 
