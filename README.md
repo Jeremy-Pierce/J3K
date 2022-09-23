@@ -61,7 +61,11 @@ If you would like to see our full, interactive slide deck, we have included a Li
 
 [J3KOIN Crowdsale Smart Contract with Solidity](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#7)
 
+![Crowdsale Contract](https://github.com/kcrachapudi/J3K/blob/main/Media/J3Koin_supportingMedia/crowdsaleContract.png)
+
 [J3KOIN Token Smart Contract with Solidity](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#8)
+
+![J3KOIN Token Smart Contract](https://github.com/kcrachapudi/J3K/blob/main/Media/J3Koin_supportingMedia/tokenContract.png)
 
 [J3KOIN Deployed Smart Contract within IDE Remix Dev Environment](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#9)
 
