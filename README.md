@@ -59,23 +59,27 @@ If you would like to see our full, interactive slide deck, we have included a Li
 
 [J3KOIN Crowdsale Timeline](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#6)
 
-[J3KOIN Crowdsale Smart Contract with Solidity](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#7)
+Presentation Link to [J3KOIN Crowdsale Smart Contract with Solidity](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#7)
 
+### J3KOIN Crowdsale Contract
 ![Crowdsale Contract](https://github.com/kcrachapudi/J3K/blob/main/Media/J3Koin_supportingMedia/crowdsaleContract.png)
 
 [J3KOIN Token Smart Contract with Solidity](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#8)
 
+### J3KOIN Token Smart Contract
 ![J3KOIN Token Smart Contract](https://github.com/kcrachapudi/J3K/blob/main/Media/J3Koin_supportingMedia/tokenContract.png)
 
-Presentation link to the [J3KOIN Deployed Smart Contract within IDE Remix Dev Environment](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#9)
+Presentation link to see a video of [J3KOIN Deployed Smart Contract within IDE Remix Dev Environment](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#9)
 
 Github link to the ![J3KOIN Deployeed Smart Contract within IDE Remix Dev Environment](https://github.com/kcrachapudi/J3K/blob/main/Media/J3Koin_supportingMedia/deploy.mov)
 
-Presentation link to [Purhcasing J3KOIN with IDE Remix Dev Environment](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#10)
+Presentation link to see a video of [Purhcasing J3KOIN with IDE Remix Dev Environment](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#10)
 
-Github link to ![Purchasing J3KOIN with IDE Remix Dev Environment](https://github.com/kcrachapudi/J3K/blob/main/Media/J3Koin_supportingMedia/purchase.mov)
+Github link to see a video of ![Purchasing J3KOIN with IDE Remix Dev Environment](https://github.com/kcrachapudi/J3K/blob/main/Media/J3Koin_supportingMedia/purchase.mov)
 
-[Transferring J3KOIN from one Metamask Account to another Metamask Account](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#11)
+Presentation link to see video of [Transferring J3KOIN from one Metamask Account to another Metamask Account](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#11)
+
+Github link to see a video of [Transferring J3KOIN from one Metamaks Account to another Metamask Account](https://github.com/kcrachapudi/J3K/blob/main/Media/J3Koin_supportingMedia/transfer.mov)
 
 [J3KOIN User Interface utilizing Python and Streamlit](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#12)
 
