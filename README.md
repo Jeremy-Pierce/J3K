@@ -84,12 +84,30 @@ Presentation link to see video of [Transferring J3KOIN from one Metamask Account
 
 Github link to see a video of [Transferring J3KOIN from one Metamaks Account to another Metamask Account](https://github.com/kcrachapudi/J3K/blob/main/Media/J3Koin_supportingMedia/transfer.mov)
 
+### J3KOIN recieved by another account on metamask with the dev envrionment
+![J3KOIN Account Recieved on Metamask](https://github.com/kcrachapudi/J3K/blob/main/Media/J3Koin_supportingMedia/account4Recieve.png)
+
 Presentation link to see a video of [J3KOIN User Interface utilizing Python and Streamlit](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#12)
 
-Github link to see a video of [J3KOIN User Interface utilizing Python and Streamlit](
+Github link to see a video of [J3KOIN User Interface utilizing Python and Streamlit](https://github.com/kcrachapudi/J3K/blob/main/Media/J3K-Streamlit-Demo.webm)
 
-[Introduction and Benefits of the Polygon Network](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#13)
+Presentation link to the [Introduction and Benefits of the Polygon Network](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#13)
 
-[J3KOIN Live on the Polygon Network!!](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#14)
+![Introduction and Benefits of the Polygon Network](
+
+Presentation link to [J3KOIN Live on the Polygon Network!!](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#14)
+
+![J3KOIN live on the Polygon Network!!](
+
+
+## Contributors
+
+Jay Wiley
+
+Jeremy Pierce
+
+James Willis
+
+Kalyan Rachapudi
 
 
