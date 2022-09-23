@@ -49,7 +49,7 @@ from decimal import Decimal
 
 ## Usage
 
-![J3KOIN](https://github.com/kcrachapudi/J3K/blob/main/J3Koin-Logo.png)
+![J3KOIN](https://github.com/kcrachapudi/J3K/blob/main/J3Koin-Logo-small.png)
 
 If you would like to see our full, interactive slide deck, we have included a Link to our [presentation][1]
 
