@@ -7,65 +7,46 @@ We founded a people-first DAO titled J3K with a goal to help those we serve achi
 
 ## Technologies for Solidity
 
+```solidity 
 pragma solidity ^0.5.0;
-
 import "./J3Koin_mintable.sol";
-
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/crowdsale/Crowdsale.sol";
-
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/crowdsale/emission/MintedCrowdsale.sol";
-
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/crowdsale/validation/CappedCrowdsale.sol";
-
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/crowdsale/validation/TimedCrowdsale.sol";
-
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/crowdsale/distribution/RefundablePostDeliveryCrowdsale.sol";
-
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/token/ERC20/ERC20.sol";
-
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/token/ERC20/ERC20Detailed.sol";
-
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/token/ERC20/ERC20Mintable.sol";
+```
 
 ## Technologies for Python
-
+```python
 import os
-
 import json
-
 import re
-
 from web3 import Web3
-
 from pathlib import Path
-
 from dotenv import load_dotenv
-
 import streamlit as st
-
 import pandas as pd
-
 from decimal import Decimal
+```
 
 ### Theme for Streamlit:
-
+```TOML
 [theme]
-
 primaryColor="#FBD400"
-
 backgroundColor="#000000"
-
 secondaryBackgroundColor="#000000"
-
 textColor="#FFFFFF"
-
 font="sans serif"
-
 font-size='150%'
+```
 
 ## Usage
 
-![J3KOIN](https://github.com/kcrachapudi/J3K/blob/main/J3Koin-Logo-small.png)
+![J3KOIN](https://i.postimg.cc/zfqxB9fT/J3-Koin-Logo-small.png)
 
 If you would like to see our full, interactive slide deck, we have included a Link to our [presentation][1]
 
@@ -78,12 +59,11 @@ If you would like to see our full, interactive slide deck, we have included a Li
 Presentation Link to [J3KOIN Crowdsale Smart Contract with Solidity](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#7)
 
 ### J3KOIN Crowdsale Contract
-![Crowdsale Contract](https://github.com/kcrachapudi/J3K/blob/main/Media/J3Koin_supportingMedia/crowdsaleContract.png)
+![Crowdsale Contract](https://i.postimg.cc/prh8rTvp/crowdsale-Contract.png)
 
-[J3KOIN Token Smart Contract with Solidity](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#8)
 
 ### J3KOIN Token Smart Contract
-![J3KOIN Token Smart Contract](https://github.com/kcrachapudi/J3K/blob/main/Media/J3Koin_supportingMedia/tokenContract.png)
+![J3KOIN Token Smart Contract](https://i.postimg.cc/YjB4Sz8s/token-Contract.png)
 
 Presentation link to see a video of [J3KOIN Deployed Smart Contract within IDE Remix Dev Environment](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#9)
 
@@ -94,14 +74,14 @@ Presentation link to see a video of [Purhcasing J3KOIN with IDE Remix Dev Enviro
 Github link to see a video of ![Purchasing J3KOIN with IDE Remix Dev Environment](https://github.com/kcrachapudi/J3K/blob/main/Media/J3Koin_supportingMedia/purchase.mov)
 
 ### J3KOIN account balance on dev environment metamask
-![J3KOIN Account Balance on Metamask](https://github.com/kcrachapudi/J3K/blob/main/Media/J3Koin_supportingMedia/account7Balance.png)
+![J3KOIN Account Balance on Metamask](https://i.postimg.cc/nh2PvHg3/account7-Balance.png)
 
 Presentation link to see video of [Transferring J3KOIN from one Metamask Account to another Metamask Account](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#11)
 
 Github link to see a video of [Transferring J3KOIN from one Metamaks Account to another Metamask Account](https://github.com/kcrachapudi/J3K/blob/main/Media/J3Koin_supportingMedia/transfer.mov)
 
 ### J3KOIN recieved by another account on metamask with the dev envrionment
-![J3KOIN Account Recieved on Metamask](https://github.com/kcrachapudi/J3K/blob/main/Media/J3Koin_supportingMedia/account4Recieve.png)
+![J3KOIN Account Recieved on Metamask](https://i.postimg.cc/tCHSwZHr/account4-Recieve.png)
 
 Presentation link to see a video of [J3KOIN User Interface utilizing Python and Streamlit](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#12)
 
@@ -109,7 +89,7 @@ Github link to see a video of [J3KOIN User Interface utilizing Python and Stream
 
 Presentation link to the [Introduction and Benefits of the Polygon Network](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#13)
 
-![Introduction and Benefits of the Polygon Network](
+![Introduction and Benefits of the Polygon Network]()
 
 Presentation link to [J3KOIN Live on the Polygon Network!!](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#14)
 
@@ -131,4 +111,7 @@ James Willis
 
 Kalyan Rachapudi
 
+## License
+
+MIT
 
