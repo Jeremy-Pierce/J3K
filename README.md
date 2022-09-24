@@ -115,6 +115,11 @@ Presentation link to [J3KOIN Live on the Polygon Network!!](https://www.canva.co
 
 ![J3KOIN live on the Polygon Network!!](
 
+## Why go live on the Polgon Network?
+We chose the Polygon network because it offers many advantages over other layer 2 sidechains while still recieving the benefits of being an Ethereum compatable token that is secure, scalable, with very low transaction fees and more. 
+
+## J3Koin is Live!!
+![J3Koin-Polygonscan](https://user-images.githubusercontent.com/98198920/192103460-e8c2d495-4261-4df0-8508-92d6f255092b.png)
 
 ## Contributors
 
