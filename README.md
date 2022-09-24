@@ -61,7 +61,6 @@ Presentation Link to [J3KOIN Crowdsale Smart Contract with Solidity](https://www
 ### J3KOIN Crowdsale Contract
 ![Crowdsale Contract](https://i.postimg.cc/prh8rTvp/crowdsale-Contract.png)
 
-
 ### J3KOIN Token Smart Contract
 ![J3KOIN Token Smart Contract](https://i.postimg.cc/YjB4Sz8s/token-Contract.png)
 
@@ -87,16 +86,14 @@ Presentation link to see a video of [J3KOIN User Interface utilizing Python and 
 
 Github link to see a video of [J3KOIN User Interface utilizing Python and Streamlit](https://github.com/kcrachapudi/J3K/blob/main/Media/J3K-Streamlit-Demo.webm)
 
-Presentation link to the [Introduction and Benefits of the Polygon Network](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#13)
+## Why go live on the Polgon Network?
+We chose the Polygon network because it offers many advantages over other layer 2 sidechains while still recieving the benefits of being an Ethereum compatable token that is secure, scalable, with very low transaction fees and more. 
 
-![Introduction and Benefits of the Polygon Network]()
+Presentation link to the [Introduction and Benefits of the Polygon Network](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#13)
 
 Presentation link to [J3KOIN Live on the Polygon Network!!](https://www.canva.com/design/DAFMqis6x3s/h14EbDxPtMhpMsBDZAeYTw/view?utm_content=DAFMqis6x3s&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton#14)
 
-![J3KOIN live on the Polygon Network!!](
-
-## Why go live on the Polgon Network?
-We chose the Polygon network because it offers many advantages over other layer 2 sidechains while still recieving the benefits of being an Ethereum compatable token that is secure, scalable, with very low transaction fees and more. 
+![Introduction and Benefits of the Polygon Network](https://i.postimg.cc/2yq1x80h/polygon-benefits-J3-Koin.png)
 
 ## J3Koin is Live!!
 ![J3Koin-Polygonscan](https://user-images.githubusercontent.com/98198920/192103460-e8c2d495-4261-4df0-8508-92d6f255092b.png)
